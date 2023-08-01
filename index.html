@@ -12,15 +12,50 @@
 <body>
     <div id="container">
         <h1>Weather App</h1>
-        <form>
-            <input type="text" value="London" id="city"></input>
-        </form>
-        <h4 id="country"></h4>
-        <h2 id="temp"></h2>
-        <h3 id="condition"></h3>
-        <img src="#" alt="current weather condition" id="conditionImg">
-        <input type="checkbox" id="checkbox">
-        <label for="checkbox" id="checkboxLabel">°C</label>
+        <div id="mainInfoContainer">
+            <h2 id="city"></h2>
+            <h4 id="country"></h4>
+            <h4 id="localTime"></h4>
+            <h2 id="temp"></h2>
+            <h3>Feels Like:</h3>
+            <h3 id="feelsLike"></h3>
+            <div id="imageDiv">
+                <img src="#" alt="current weather condition" id="conditionImg">
+            </div>
+            <h3 id="condition"></h3>
+        </div>
+        <div id="secondaryInfoContainer">
+            <div id="windContainer">
+                <h3 id="windDirection">Wind Direction</h3>
+                <h3 id="windSpeed">Wind Speed</h3>
+            </div>
+            <div id="humidityContainer">
+                <h3 id="humidity">Humidity</h3>
+            </div>
+            <div id="pressureContainer">
+                <h3 id="pressure">Pressure</h3>
+            </div>
+            <div id="uvContainer">
+                <h3 id="uv">UV Index</h3>
+            </div>
+        </div>
+        <div id="forecastContainer">
+            3 Day Forecast
+        </div>
+        <div id="timeSliderContainer">
+            Time Slider
+        </div>
+        <div id="settingsContainer">
+            <div id="checkboxContainer">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" id="checkboxLabel">°C</label>
+                <input type="checkbox" name="windCheckbox" id="windCheckbox">
+                <label for="windCheckbox" id="windCheckboxLabel">KPH</label>
+            </div>
+            <form>
+                <input type="text" placeholder="enter city name"></input>
+            </form>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>
