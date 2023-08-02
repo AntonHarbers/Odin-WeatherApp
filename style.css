@@ -1,17 +1,59 @@
 *{
     margin: 0;
-    background-color: midnightblue;
-    color: beige;
+    color: white;
     user-select: none;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Raleway Dots', cursive;
+    font-weight: 800;
+}
+
+header{
+    display: flex;
+    height: 5rem;
+    width: 100vw;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+
+#settingsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#searchField{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: .3rem;
+    padding-right: .3rem;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#searchField img{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+
 }
 
 input[type=text]{
+    color: black;
     border-radius: 5px;
     border: 0px solid black;
-    padding: 5px;
     font-size: 20px;
     outline: none;
-    text-align: center;
+}
+
+label{
+    font-size: 1.5rem;
+}
+
+label:hover{
+    cursor: pointer;
 }
 
 body{
@@ -32,8 +74,8 @@ img{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    width: 200px;
 }
-
 
 #imageDiv{
     display: flex;
@@ -42,19 +84,98 @@ img{
     gap: 1rem;
 }
 
-#container{
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
-h1{
+h2{
     font-size: 3rem;
-    margin-bottom: 1rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    font-size: 1.2rem;
 }
 
 h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 
+#content{
+    display: flex;
+    height: 600px;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mainInfoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#feelsLikeContainer{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#windContainer,#humidityContainer,#pressureContainer,#uvContainer {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.infoSubContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+
+#windDirection{
+    background-color: white;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+}
+
+/* Media Query that makes the header a flex column on small screens */
+@media only screen and (max-width: 600px) {
+    header{
+        flex-direction: column;
+        height: 10rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    #settingsContainer{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    
+#content{
+    display: flex;
+    flex-direction: column;
+    height: 1200px;
+    gap: 2rem;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+}

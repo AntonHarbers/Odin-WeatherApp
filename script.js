@@ -13,7 +13,7 @@ const conditionText = document.querySelector("#condition");
 
 // secondary info elements
 const windSpeedText = document.querySelector("#windSpeed");
-const windDirectionText = document.querySelector("#windDirection");
+const windDirectionImage = document.querySelector("#windDirection");
 const humidityText = document.querySelector("#humidity");
 const uvText = document.querySelector("#uv");
 const pressureText = document.querySelector("#pressure");
@@ -86,7 +86,29 @@ const getWeather = async () => {
     humidityText.innerHTML = (await data.current.humidity) + "%";
     uvText.innerHTML = await data.current.uv;
     pressureText.innerHTML = (await data.current.pressure_mb) + " mb";
-    windDirectionText.innerHTML = await data.current.wind_dir;
+
+    
+    // set wind direction image according to wind direction
+    console.log(await data.current.wind_dir)
+    const windDirection = await data.current.wind_dir;
+    if (windDirection === "N") {
+      windDirectionImage.src = "images/arrows/up.png";
+    } else if (windDirection === "S") {
+      windDirectionImage.src = "images/arrows/down.png";
+    } else if (windDirection === "E") {
+      windDirectionImage.src = "images/arrows/right.png";
+    } else if (windDirection === "W") {
+      windDirectionImage.src = "images/arrows/left.png";
+    } else if (windDirection === "NE") {
+      windDirectionImage.src = "images/arrows/up-right.png";
+    } else if (windDirection === "NNW" || windDirection === "WNW") {
+      windDirectionImage.src = "images/arrows/up-left.png";
+    } else if (windDirection === "SE") {
+      windDirectionImage.src = "images/arrows/down-right.png";
+    } else if (windDirection === "WSW" || windDirection === "SSW") {
+      windDirectionImage.src = "images/arrows/down-left.png";
+    }
+
 
     if (isWindKph) {
       windSpeedText.innerHTML = (await data.current.wind_kph) + " km/h";
@@ -96,9 +118,9 @@ const getWeather = async () => {
 
     // set body background color according to day/night
     if (await data.current.is_day) {
-      document.body.style.backgroundColor = "#e6f7ff";
+      document.body.style.backgroundColor = "blue";
     } else {
-      document.body.style.backgroundColor = "#1a1a1a";
+      document.body.style.backgroundColor = "midnightblue";
     }
   } catch (e) {
     console.log(e);

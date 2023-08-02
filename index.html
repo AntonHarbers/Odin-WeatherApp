@@ -5,58 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Weather App</title>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway+Dots&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <div id="container">
-        <h1>Weather App</h1>
-        <div id="mainInfoContainer">
-            <h2 id="city"></h2>
-            <h4 id="country"></h4>
-            <h4 id="localTime"></h4>
-            <h2 id="temp"></h2>
-            <h3>Feels Like:</h3>
-            <h3 id="feelsLike"></h3>
-            <div id="imageDiv">
-                <img src="#" alt="current weather condition" id="conditionImg">
+        <header>
+            <h1>Weather App</h1>
+            <div id="settingsContainer">
+                <form>
+                    <div id="searchField">
+                        <label for="searchInput">
+                            <img src="/images/search-svgrepo-com.png" alt="searchIcon">
+                        </label>
+                        <input id="searchInput" name="searchInput" type="text" placeholder="enter city name"></input>
+                    </div>
+                </form>
+                <div id="checkboxContainer">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox" id="checkboxLabel">°C</label>
+                    <input type="checkbox" name="windCheckbox" id="windCheckbox">
+                    <label for="windCheckbox" id="windCheckboxLabel">KPH</label>
+                </div>
             </div>
-            <h3 id="condition"></h3>
+        </header> 
+        <div id="content">
+            <div id="mainInfoContainer">
+                <h2 id="city"></h2>
+                <h4 id="country"></h4>
+                <h4 id="localTime"></h4>
+                <h2 id="temp"></h2>
+                <div id="feelsLikeContainer">
+                    <h3>Feels Like:</h3>
+                    <h3 id="feelsLike"></h3>
+                </div>
+                <div id="imageDiv">
+                    <img src="#" alt="current weather condition" id="conditionImg">
+                </div>
+                <h3 id="condition"></h3>
+            </div>
+            <div id="secondaryInfoContainer">
+                <div id="windContainer">
+                    <img src="/images/wind-svgrepo-com.png" alt="windImage">
+                    <div class="infoSubContainer">
+                        <img id="windDirection" alt="windDirectionImg"/>
+                        <h3 id="windSpeed">Wind Speed</h3>
+                    </div>
+                </div>
+                <div id="humidityContainer">
+                    <img src="/images/humidity-svgrepo-com.png" alt="humidityImage">
+                    <div class="infoSubContainer">
+                        <h3 id="humidity">Humidity</h3>
+                    </div>
+                </div>
+                <div id="pressureContainer">
+                    <img src="/images/gauge-high-svgrepo-com.png" alt="pressureImage">
+                    <div class="infoSubContainer">
+                        <h3 id="pressure">Pressure</h3>
+                    </div>
+                </div>
+                <div id="uvContainer">
+                    <img src="/images/uv-1-svgrepo-com.png" alt="uvImage">
+                    <div class="infoSubContainer">
+                        <h3 id="uv">UV Index</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="secondaryInfoContainer">
-            <div id="windContainer">
-                <h3 id="windDirection">Wind Direction</h3>
-                <h3 id="windSpeed">Wind Speed</h3>
-            </div>
-            <div id="humidityContainer">
-                <h3 id="humidity">Humidity</h3>
-            </div>
-            <div id="pressureContainer">
-                <h3 id="pressure">Pressure</h3>
-            </div>
-            <div id="uvContainer">
-                <h3 id="uv">UV Index</h3>
-            </div>
-        </div>
+       
         <div id="forecastContainer">
             3 Day Forecast
         </div>
         <div id="timeSliderContainer">
             Time Slider
         </div>
-        <div id="settingsContainer">
-            <div id="checkboxContainer">
-                <input type="checkbox" id="checkbox">
-                <label for="checkbox" id="checkboxLabel">°C</label>
-                <input type="checkbox" name="windCheckbox" id="windCheckbox">
-                <label for="windCheckbox" id="windCheckboxLabel">KPH</label>
-            </div>
-            <form>
-                <input type="text" placeholder="enter city name"></input>
-            </form>
-        </div>
-    </div>
 </body>
 <script src="script.js"></script>
 </html>
