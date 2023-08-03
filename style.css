@@ -4,7 +4,15 @@
     user-select: none;
     font-family: 'Merriweather Sans', sans-serif;
     font-family: 'Raleway Dots', cursive;
-    font-weight: 800;
+    font-weight: 900;
+    /* stretch background gradient */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: gradient 15s ease infinite;
+}
+
+body{
+    height: 100%;
 }
 
 header{
@@ -28,7 +36,7 @@ header{
     align-items: center;
     padding-left: .3rem;
     padding-right: .3rem;
-    gap: 1rem;
+    gap: 0rem;
     background-color: white;
     border-radius: 10px;
 }
@@ -37,6 +45,7 @@ header{
     height: 1.5rem;
     width: 1.5rem;
     margin-right: 0.5rem;
+    margin-top: .3rem;
 
 }
 
@@ -94,7 +103,7 @@ h2{
 }
 
 h3{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 h4{
@@ -152,6 +161,24 @@ h1,h2,h3,h4,h5,h6{
     width: 2rem;
 }
 
+#forecastContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.forecastDay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 200px;
+}
+
 /* Media Query that makes the header a flex column on small screens */
 @media only screen and (max-width: 600px) {
     header{
@@ -177,5 +204,9 @@ h1,h2,h3,h4,h5,h6{
     width: 80%;
     justify-content: space-between;
     align-items: center;
+}
+
+#forecastContainer{
+    flex-direction: column;
 }
 }

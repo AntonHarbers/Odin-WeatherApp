@@ -20,7 +20,7 @@
                         <label for="searchInput">
                             <img src="images/search-svgrepo-com.png" alt="searchIcon">
                         </label>
-                        <input id="searchInput" name="searchInput" type="text" placeholder="enter city name"></input>
+                        <input id="searchInput" maxlength="20" name="searchInput" type="text" placeholder="enter city name"></input>
                     </div>
                 </form>
                 <div id="checkboxContainer">
@@ -74,12 +74,25 @@
                 </div>
             </div>
         </div>
-       
+       <h2>3 Day Forecast</h2>
+       <br>
+       <br>
         <div id="forecastContainer">
-            3 Day Forecast
-        </div>
-        <div id="timeSliderContainer">
-            Time Slider
+            <div class="forecastDay" id="forecastDay1">
+                <h3 id="forecastDay1Date"></h3>
+                <img src="#" alt="weather condition" id="forecastDay1Img">
+                <h3 id="forecastDay1Temp"></h3>
+            </div>
+            <div class="forecastDay" id="forecastDay2">
+                <h3 id="forecastDay2Date"></h3>
+                <img src="#" alt="weather condition" id="forecastDay2Img">
+                <h3 id="forecastDay2Temp"></h3>
+            </div>
+            <div class="forecastDay" id="forecastDay3">
+                <h3 id="forecastDay3Date"></h3>
+                <img src="#" alt="weather condition" id="forecastDay3Img">
+                <h3 id="forecastDay3Temp"></h3>
+            </div>
         </div>
 </body>
 <script src="script.js"></script>
