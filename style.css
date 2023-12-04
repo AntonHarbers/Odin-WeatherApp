@@ -1,202 +1,256 @@
-*{
-    margin: 0;
-    color: white;
-    user-select: none;
-    font-family: 'Merriweather Sans', sans-serif;
-    font-family: 'Raleway Dots', cursive;
-    font-weight: 900;
-    /* stretch background gradient */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    animation: gradient 15s ease infinite;
+* {
+  margin: 0;
+  user-select: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  text-shadow: 0px 0px 10px black;
 }
 
-body{
-    height: 100%;
+body {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
-header{
-    display: flex;
-    height: 5rem;
-    width: 100vw;
-    justify-content: space-around;
-    padding-top: 2rem;
+header {
+  display: flex;
+  height: 5rem;
+  width: 100vw;
+  justify-content: space-around;
+  padding-top: 2rem;
 }
 
-#settingsContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+#settingsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-#searchField{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: .3rem;
-    padding-right: .3rem;
-    gap: 0rem;
-    background-color: white;
-    border-radius: 10px;
+#searchField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  gap: 0rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
-#searchField img{
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-right: 0.5rem;
-    margin-top: .3rem;
-
+#searchField img {
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
 }
 
-input[type=text]{
-    color: black;
-    border-radius: 5px;
-    border: 0px solid black;
-    font-size: 20px;
-    outline: none;
+#searchField img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+#searchField img:active {
+  transform: scale(0.7);
 }
 
-label{
-    font-size: 1.5rem;
+input[type='text'] {
+  border-radius: 5px;
+  border: 0px solid black;
+  font-size: 20px;
+  outline: none;
+  background-color: transparent;
+  color: black;
+  text-shadow: none;
+  font-size: 1.8rem;
+  padding: 0.2rem;
 }
 
-label:hover{
-    cursor: pointer;
+input[type='checkbox'] {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 0px solid black;
+  outline: none;
+  margin-bottom: 0rem;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+input[type='checkbox']:checked {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 0px solid black;
+  outline: none;
 }
 
-img{
-    height: 100px;
-    width: 100px;
+input[type='checkbox']:hover {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 0px solid black;
+  outline: none;
 }
 
-#checkboxContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 200px;
+label {
+  font-size: 1.5rem;
 }
 
-#imageDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+label:hover {
+  cursor: pointer;
 }
 
-h1{
-    font-size: 4rem;
-    margin-bottom: 1rem;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-h2{
-    font-size: 3rem;
+img {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.581);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-h3{
-    font-size: 2rem;
+img:hover {
+  cursor: pointer;
+  background-color: black;
 }
 
-h4{
-    font-size: 1.2rem;
+#checkboxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 200px;
 }
 
-h1,h2,h3,h4,h5,h6{
-    text-align: center;
+#imageDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-#content{
-    display: flex;
-    height: 600px;
-    width: 80%;
-    justify-content: space-between;
-    align-items: center;
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
-#mainInfoContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
+h2 {
+  font-size: 3rem;
 }
 
-#feelsLikeContainer{
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
+h3 {
+  font-size: 2rem;
 }
 
-#windContainer,#humidityContainer,#pressureContainer,#uvContainer {
-    display: flex;
-    width: 300px;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+h4 {
+  font-size: 1.2rem;
 }
 
-.infoSubContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
 }
 
-
-#windDirection{
-    background-color: rgba(255, 255, 255, 0.459);
-    border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
+#content {
+  display: flex;
+  height: 600px;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#forecastContainer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    margin-bottom: 2rem;
+#mainInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.forecastDay{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 200px;
+#feelsLikeContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#windContainer,
+#humidityContainer,
+#pressureContainer,
+#uvContainer {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoSubContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+#windDirection {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
+#forecastContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.forecastDay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 200px;
 }
 
 /* Media Query that makes the header a flex column on small screens */
 @media only screen and (max-width: 600px) {
-    header{
-        flex-direction: column;
-        height: 10rem;
-    }
+  header {
+    flex-direction: column;
+    height: 10rem;
+  }
 
-    h1{
-        font-size: 2.5rem;
-    }
+  h1 {
+    font-size: 2.5rem;
+  }
 
-    #settingsContainer{
-        flex-direction: column;
-        gap: 1rem;
-    }
+  #settingsContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    
-#content{
+  #content {
     display: flex;
     flex-direction: column;
     height: 1200px;
@@ -204,9 +258,79 @@ h1,h2,h3,h4,h5,h6{
     width: 80%;
     justify-content: space-between;
     align-items: center;
+  }
+
+  #forecastContainer {
+    flex-direction: column;
+  }
+
+  input[type='checkbox'] {
+    margin-bottom: 1rem;
+  }
 }
 
-#forecastContainer{
-    flex-direction: column;
+.drop {
+  height: 5px;
+  width: 5px;
+  background-color: aqua;
+  position: absolute;
+  animation: droplet 1s ease-in;
+  top: -50px;
+  box-shadow: 0 0 10px 0 blue;
 }
+
+.snowDrop {
+  height: 5px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+  animation: droplet 3s ease-in;
+  top: -50px;
+  box-shadow: 0 0 10px 0 white;
+}
+
+.light {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  animation: thunder 0.5s;
+  opacity: 0;
+}
+
+@keyframes thunder {
+  0% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes droplet {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 98vh;
+  }
+}
+
+@keyframes snow {
+  0% {
+    top: -50px;
+  }
+
+  100% {
+    top: 98vh;
+  }
 }

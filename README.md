@@ -1,13 +1,16 @@
-# Odin-WeatherApp
+# The Odin Project - Weather App
 
-A basic weather app for the odin project.
+A weather app using the weather API built using HTML, CSS and Javascript for the Odin Project.
 
+[Live Link](https://antonharbers.github.io/Odin-WeatherApp/)
 
 Todos:
 
-// show forecast for next 3 days below main view
+- Add Animations based on Weather
 
-// if cloudy, add animated clouds, more cloudy more clouds
-// if rain, add animated rain
-// if sunny, have no clouds but animate sunshine
+Commit Log:
 
+- Updated Background Images
+- Attempted Fix of Wind Direction Images
+- Update Font
+- Updated Search Box to be more interactive
