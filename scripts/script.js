@@ -174,9 +174,9 @@ async function UpdateUI(data) {
   }
 
   if (await data.current.is_day) {
-    document.body.style.backgroundImage = `url('./images/daytime.png')`;
+    document.body.style.backgroundImage = `url('images/daytime.png')`;
   } else {
-    document.body.style.backgroundImage = `url('./images/nighttime.png')`;
+    document.body.style.backgroundImage = `url('images/nighttime.png')`;
   }
 }
 
