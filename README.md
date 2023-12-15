@@ -4,7 +4,7 @@ A weather app using the weather API built using HTML, CSS and Javascript for the
 
 API used is weather.api
 
-[Live Link](https://antonharbers.github.io/Odin-WeatherApp/)
+[Live Link](https://antonharbers.github.io/Weather-App-Demo/)
 
 ![Screenshot of Weather app](/images/repoImage.png)
 
